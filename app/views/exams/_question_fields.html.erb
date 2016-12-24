@@ -1,0 +1,10 @@
+<fieldset>
+  <%= f.label :content, "Soru:"%><br/>
+  <%= f.text_area :content, :row=>3 %><br />
+  <%= f.check_box :_destroy%>
+  <%= f.label :_destroy, "Soruyu Sil"%>
+  <%= f.fields_for :choices do |build|%>
+ <br />
+     <%= render 'choice_fields', f:build%>
+ <% end %>
+</fieldset>
